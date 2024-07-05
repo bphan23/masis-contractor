@@ -1,6 +1,24 @@
-import ContractorForm from '../ui/ContractorForm'
+import ContactForm from '../ui/ContactForm'
 
 function Contractor() {
+    // Props sending to form
+    let serviceId = 'service_triys3q'
+    let templateId = 'template_1yb0x8v'
+    let emailPublicKey = 'J0BoHxaeaOuJ_7oXU'
+    let selectDescription = 'Select Contractor Job: '
+    let selectOptions = {
+        'Please Select': 'none',
+        'Granite & Marble': 'granite-marble',
+        'Tile & Flooring': 'tile-floor',
+        'Kitchen Remodel': 'kitchen-remodel',
+        'Bathroom Remodel': 'bathroom-remodel',
+        'Commerical Cleaning': 'commerical-cleaning',
+        'Residential Cleaning': 'residential-cleaning',
+        'Other Job': 'other-job',
+    }
+    let aboutPlaceHolder =
+        'Tell us a few sentences about what construction work you need done...'
+
     return (
         <div className="flex flex-col">
             <h1 className="my-7 text-center text-3xl font-semibold">
@@ -56,7 +74,15 @@ function Contractor() {
                 Free Estimate
             </h2>
 
-            <ContractorForm />
+            <ContactForm
+                serviceId={serviceId}
+                templateId={templateId}
+                emailPublicKey={emailPublicKey}
+                selectDescription={selectDescription}
+                selectOptions={selectOptions}
+                aboutPlaceHolder={aboutPlaceHolder}
+                usingCareerForm={false}
+            />
         </div>
     )
 }

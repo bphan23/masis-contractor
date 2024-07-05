@@ -1,6 +1,19 @@
-import CleaningForm from '../ui/CleaningForm'
+import ContactForm from '../ui/ContactForm'
 
 function Cleaning() {
+    // Props sending to form
+    let serviceId = 'service_28dpmrh'
+    let templateId = 'template_vegmxhq'
+    let emailPublicKey = 'Iskq673SmMmHylJBR'
+    let selectDescription = 'Select Cleaning Service: '
+    let selectOptions = {
+        'Please Select': 'none',
+        'Commerical Cleaning': 'commerical-cleaning',
+        'Residential Cleaning': 'residential-cleaning',
+    }
+    let aboutPlaceHolder =
+        'Tell us a few sentences about what you need cleaned...'
+
     return (
         <div className="flex flex-col">
             <h1 className="my-7 text-center text-3xl font-semibold">
@@ -111,7 +124,15 @@ function Cleaning() {
                 Free Cleaning Consultation
             </h2>
 
-            <CleaningForm />
+            <ContactForm
+                serviceId={serviceId}
+                templateId={templateId}
+                emailPublicKey={emailPublicKey}
+                selectDescription={selectDescription}
+                selectOptions={selectOptions}
+                aboutPlaceHolder={aboutPlaceHolder}
+                usingCareerForm={false}
+            />
         </div>
     )
 }

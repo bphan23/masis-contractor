@@ -1,7 +1,15 @@
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 
-function CleaningForm() {
+function ContactForm({
+    serviceId,
+    templateId,
+    emailPublicKey,
+    selectDescription,
+    selectOptions,
+    aboutPlaceHolder,
+    usingCareerForm,
+}) {
     const form = useRef()
 
     const [selectedValue, setSelectedValue] = useState('')
@@ -10,12 +18,27 @@ function CleaningForm() {
     const [phoneInput, setPhone] = useState('')
     const [aboutTextArea, setAbout] = useState('')
 
+    // for career form
+    if (usingCareerForm === true) {
+        if (selectedValue === 'contractor') {
+            // send to masis contractor email
+            serviceId = 'service_triys3q'
+            templateId = 'template_yyidqrm'
+            emailPublicKey = 'J0BoHxaeaOuJ_7oXU'
+        } else if (selectedValue === 'cleaning') {
+            // send to masis cleaning email
+            serviceId = 'service_28dpmrh'
+            templateId = 'template_rkzm88d'
+            emailPublicKey = 'Iskq673SmMmHylJBR'
+        }
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault()
 
         emailjs
-            .sendForm('service_28dpmrh', 'template_vegmxhq', form.current, {
-                publicKey: 'Iskq673SmMmHylJBR',
+            .sendForm(serviceId, templateId, form.current, {
+                publicKey: emailPublicKey,
             })
             .then(
                 () => {
@@ -34,13 +57,13 @@ function CleaningForm() {
 
     return (
         <form
-            className="mx-10 mb-7 rounded-md border border-gray-200 bg-white px-5"
+            className="mx-10 my-7 rounded-md border border-gray-200 bg-white px-5"
             ref={form}
             onSubmit={handleSubmit}
         >
             <div className="my-4">
                 <label htmlFor="selected" className="mr-2 font-semibold">
-                    Select Cleaning Service:{' '}
+                    {selectDescription}
                 </label>
                 <select
                     className="rounded-md border border-gray-300"
@@ -49,13 +72,9 @@ function CleaningForm() {
                         setSelectedValue(event.target.value)
                     }}
                 >
-                    <option value="none">Please Select</option>
-                    <option value="commerical-cleaning">
-                        Commerical Cleaning
-                    </option>
-                    <option value="residential-cleaning">
-                        Residential Cleaning
-                    </option>
+                    {Object.entries(selectOptions).map(([key, value]) => (
+                        <option value={value}>{key}</option>
+                    ))}
                 </select>
             </div>
             {/* Name */}
@@ -66,11 +85,11 @@ function CleaningForm() {
                 <input
                     type="text"
                     name="full_name"
+                    className="mt-2 block w-1/2 rounded-md border border-gray-300 p-2"
+                    placeholder="Enter Full Name"
                     onChange={(event) => {
                         setFullName(event.target.value)
                     }}
-                    className="mt-2 block w-1/2 rounded-md border border-gray-300 p-2"
-                    placeholder="Enter Full Name"
                 />
             </div>
             {/* Email */}
@@ -81,11 +100,11 @@ function CleaningForm() {
                 <input
                     type="text"
                     name="email"
+                    className="mt-2 block w-1/2 rounded-md border border-gray-300 p-2"
+                    placeholder="Enter Email"
                     onChange={(event) => {
                         setEmail(event.target.value)
                     }}
-                    className="mt-2 block w-1/2 rounded-md border border-gray-300 p-2"
-                    placeholder="Enter Email"
                 />
             </div>
             {/* Phone Number */}
@@ -96,11 +115,11 @@ function CleaningForm() {
                 <input
                     type="tel"
                     name="phone"
+                    className="mt-2 block w-1/2 rounded-md border border-gray-300 p-2"
+                    placeholder="Enter Phone Number"
                     onChange={(event) => {
                         setPhone(event.target.value)
                     }}
-                    className="mt-2 block w-1/2 rounded-md border border-gray-300 p-2"
-                    placeholder="Enter Phone Number"
                 />
             </div>
             {/* About */}
@@ -112,7 +131,7 @@ function CleaningForm() {
                 <textarea
                     className="mt-2 min-h-[100px] w-full rounded-md border border-gray-300 p-2"
                     type="text"
-                    placeholder="Tell us a few sentences about what you need cleaned..."
+                    placeholder={aboutPlaceHolder}
                     name="about"
                     onChange={(event) => {
                         setAbout(event.target.value)
@@ -121,7 +140,7 @@ function CleaningForm() {
             </div>
 
             <div className="mb-5 flex flex-row justify-end">
-                <button className="mr-4 rounded-md bg-stone-100 px-6 py-1 file:border-none hover:bg-stone-200">
+                <button className="mr-4 rounded-md border border-gray-300 bg-stone-100 px-6 py-1 hover:bg-stone-200">
                     Clear
                 </button>
                 <button className="rounded-md border border-gray-300 bg-orange-500 px-6 py-1 hover:bg-orange-600">
@@ -132,4 +151,4 @@ function CleaningForm() {
     )
 }
 
-export default CleaningForm
+export default ContactForm

@@ -1,6 +1,18 @@
-import CareersForm from '../ui/CareersForm'
+import ContactForm from '../ui/ContactForm'
 
 function Careers() {
+    // Props sending to form
+    let serviceId = ''
+    let templateId = ''
+    let emailPublicKey = ''
+    let selectDescription = 'Select Job Role: '
+    let selectOptions = {
+        'Please Select': 'none',
+        'Contractor Role': 'contractor',
+        'Cleaning Role': 'cleaning',
+    }
+    let aboutPlaceHolder = 'Tell us a few sentences about yourself.'
+
     return (
         <div className="my-0 flex flex-col">
             <div className="min-h-[800px] bg-[url('../public/images/seattle.jpg')] bg-cover bg-fixed">
@@ -9,7 +21,7 @@ function Careers() {
                 </h1>
             </div>
 
-            <div className="bg-masis-green mb-7 p-8">
+            <div className="mb-7 bg-masis-green p-8">
                 <h2 className="mb-5 text-center text-3xl font-semibold">
                     Why Should You Join Masis
                 </h2>
@@ -50,7 +62,15 @@ function Careers() {
             <h2 className="text-center text-2xl font-semibold">
                 Join Our Team Today!
             </h2>
-            <CareersForm />
+            <ContactForm
+                serviceId={serviceId}
+                templateId={templateId}
+                emailPublicKey={emailPublicKey}
+                selectDescription={selectDescription}
+                selectOptions={selectOptions}
+                aboutPlaceHolder={aboutPlaceHolder}
+                usingCareerForm={true}
+            />
         </div>
     )
 }
