@@ -4,7 +4,7 @@ function Header() {
     return (
         <header className="fixed top-0 z-0 w-full border-b bg-white font-semibold text-gray-600 shadow-xl">
             <div className="flex content-center justify-between align-middle">
-                <span className="text-masis-green mx-5 py-5 uppercase">
+                <span className="mx-5 py-5 uppercase text-masis-green">
                     <Link to="/">
                         Masis
                         {/* <img

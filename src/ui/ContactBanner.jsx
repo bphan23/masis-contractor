@@ -2,14 +2,17 @@ import { Link } from 'react-router-dom'
 
 function ContactBanner() {
     return (
-        <div className="mx-8 mb-7 grid grid-cols-5 justify-items-center py-4">
+        <div
+            className="mx-auto text-center lg:mx-8 lg:mb-7 lg:grid lg:grid-cols-5 lg:justify-items-center lg:py-4 lg:text-left"
+            data-aos="fade-up"
+        >
             <img
-                className="h-40"
+                className="mx-auto mb-2 h-40 lg:mx-0"
                 src="../../public/images/masis-logo.jpg"
                 alt="masis general contractor logo"
             />
 
-            <div>
+            <div className="mb-2">
                 <h3 className="font-semibold uppercase">Contact Us</h3>
                 <a className="text-gray-600" href="tel:2065108575">
                     206-510-8575
@@ -28,7 +31,7 @@ function ContactBanner() {
                 </a>
             </div>
 
-            <div>
+            <div className="mb-2">
                 <h3 className="font-semibold uppercase">Business Hours</h3>
                 <ul className="text-gray-600">
                     <li>Monday 8:00 AM - 8:00 PM</li>
@@ -41,7 +44,7 @@ function ContactBanner() {
                 </ul>
             </div>
 
-            <div>
+            <div className="mb-2">
                 <h3 className="font-semibold uppercase">Quick Links</h3>
                 <ul className="text-gray-600">
                     <li className="hover:text-orange-500 hover:underline">
@@ -59,15 +62,15 @@ function ContactBanner() {
                 </ul>
             </div>
 
-            <div>
+            <div className="mb-4">
                 <h3 className="font-semibold uppercase">Services</h3>
                 <ul className="text-gray-600">
-                    <li>Granite & Marble</li>
-                    <li>Tile & Flooring</li>
-                    <li>Kitchen Remodeling</li>
-                    <li>Bathroom Remodeling</li>
-                    <li>Commerical Cleaning</li>
-                    <li>Residential Cleaning</li>
+                    <li>Home Additions</li>
+                    <li>Remodeling</li>
+                    <li>Roofing & Decks</li>
+                    <li>Wall Moving & Enlarging Doors</li>
+                    <li>Flooring & Tiles</li>
+                    <li>Much More...</li>
                 </ul>
             </div>
         </div>

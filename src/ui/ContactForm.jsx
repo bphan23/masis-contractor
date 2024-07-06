@@ -60,20 +60,23 @@ function ContactForm({
             className="mx-10 my-7 rounded-md border border-gray-200 bg-white px-5"
             ref={form}
             onSubmit={handleSubmit}
+            data-aos="fade-up"
         >
             <div className="my-4">
                 <label htmlFor="selected" className="mr-2 font-semibold">
                     {selectDescription}
                 </label>
                 <select
-                    className="rounded-md border border-gray-300"
+                    className="rounded-md border border-gray-300 transition-all duration-300 focus:outline-none focus:ring focus:ring-masis-green"
                     name="selected_value"
                     onChange={(event) => {
                         setSelectedValue(event.target.value)
                     }}
                 >
                     {Object.entries(selectOptions).map(([key, value]) => (
-                        <option value={value}>{key}</option>
+                        <option className="bg-masis-green" value={value}>
+                            {key}
+                        </option>
                     ))}
                 </select>
             </div>
@@ -85,7 +88,7 @@ function ContactForm({
                 <input
                     type="text"
                     name="full_name"
-                    className="mt-2 block w-1/2 rounded-md border border-gray-300 p-2"
+                    className="input"
                     placeholder="Enter Full Name"
                     onChange={(event) => {
                         setFullName(event.target.value)
@@ -100,7 +103,7 @@ function ContactForm({
                 <input
                     type="text"
                     name="email"
-                    className="mt-2 block w-1/2 rounded-md border border-gray-300 p-2"
+                    className="input"
                     placeholder="Enter Email"
                     onChange={(event) => {
                         setEmail(event.target.value)
@@ -115,7 +118,7 @@ function ContactForm({
                 <input
                     type="tel"
                     name="phone"
-                    className="mt-2 block w-1/2 rounded-md border border-gray-300 p-2"
+                    className="input"
                     placeholder="Enter Phone Number"
                     onChange={(event) => {
                         setPhone(event.target.value)
@@ -129,7 +132,7 @@ function ContactForm({
                 </label>
 
                 <textarea
-                    className="mt-2 min-h-[100px] w-full rounded-md border border-gray-300 p-2"
+                    className="mt-2 min-h-[100px] w-full rounded-md border border-gray-300 p-2 transition-all duration-300 focus:outline-none focus:ring focus:ring-masis-green"
                     type="text"
                     placeholder={aboutPlaceHolder}
                     name="about"
@@ -140,10 +143,10 @@ function ContactForm({
             </div>
 
             <div className="mb-5 flex flex-row justify-end">
-                <button className="mr-4 rounded-md border border-gray-300 bg-stone-100 px-6 py-1 hover:bg-stone-200">
+                <button className="mr-4 rounded-md border border-gray-300 bg-stone-100 px-6 py-1 transition-colors duration-300 hover:bg-stone-200 focus:outline-none focus:ring focus:ring-stone-100 focus:ring-offset-2 disabled:cursor-not-allowed">
                     Clear
                 </button>
-                <button className="rounded-md border border-gray-300 bg-orange-500 px-6 py-1 hover:bg-orange-600">
+                <button className="focus: focus- rounded-md border border-gray-300 bg-orange-500 px-6 py-1 transition-colors duration-300 hover:bg-orange-600 focus:outline-none focus:ring focus:ring-orange-500 focus:ring-offset-2 disabled:cursor-not-allowed">
                     Submit
                 </button>
             </div>

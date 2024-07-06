@@ -21,40 +21,56 @@ function Careers() {
                 </h1>
             </div>
 
-            <div className="mb-7 bg-masis-green p-8">
+            <div className="mb-7 bg-masis-green p-8" data-aos="fade-up">
                 <h2 className="mb-5 text-center text-3xl font-semibold">
                     Why Should You Join Masis
                 </h2>
-                <div className="grid grid-cols-3 justify-items-center py-7 text-center">
+                <div className="grid grid-cols-3 justify-items-center gap-x-10 py-7 text-center">
                     <div>
-                        <h2 className="mb-5 text-center text-xl">
+                        <h2 className="mb-5 text-2xl font-semibold">
                             Competitive Pay
                         </h2>
                         <img
-                            className="m-auto h-[200px]"
-                            src="../../public/images/pay.png"
+                            className="mx-auto h-[200px]"
+                            src="../../public/images/money.png"
                             alt="competitive pay"
                         />
+                        <p className="p-4">
+                            We offer competitive pay rates to ensure our team
+                            members are fairly compensated for their skills and
+                            contributions. Your expertise deserves to be
+                            rewarded.
+                        </p>
                     </div>
                     <div>
-                        <h2 className="mb-5 text-center text-xl">
+                        <h2 className="mb-5 text-2xl font-semibold">
                             Career Growth & Development
                         </h2>
                         <img
-                            className="m-auto h-[200px]"
-                            src="../../public/images/career.png"
+                            className="mx-auto h-[200px]"
+                            src="../../public/images/promotion.png"
                             alt="career growth and development"
                         />
+                        <p className="p-4">
+                            We support your career growth with training
+                            programs, mentorship, and the chance to work on
+                            diverse and exciting projects.
+                        </p>
                     </div>
                     <div>
-                        <h2 className="mb-5 text-center text-xl">
+                        <h2 className="mb-5 text-2xl font-semibold">
                             Job Stability & Security
                         </h2>
                         <img
                             className="m-auto h-[200px]"
-                            src="../../public/images/security.png"
+                            src="../../public/images/job.png"
                             alt="job stability and security"
                         />
+                        <p className="p-4">
+                            We provide our employees with job stability and
+                            security, offering a reliable and consistent work
+                            environment where you can build a long-term career.
+                        </p>
                     </div>
                 </div>
             </div>
