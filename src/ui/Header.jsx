@@ -1,35 +1,73 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Header() {
-    return (
-        <header className="fixed top-0 z-0 w-full border-b bg-white font-semibold text-gray-600 shadow-xl">
-            <div className="flex content-center justify-between align-middle">
-                <span className="mx-5 py-5 uppercase text-masis-green">
-                    <Link to="/">
-                        Masis
-                        {/* <img
-                            src="../../public/images/masis-logo.jpg"
-                            alt="masis contractor logo"
-                            className="z-10 h-24"
-                        /> */}
-                    </Link>
-                </span>
-                <ul className="flex flex-row justify-end">
-                    <li className="mx-5 py-5 hover:text-orange-500 hover:underline">
-                        <Link to="/">About</Link>
-                    </li>
+    const [showMenu, setShowMenu] = useState(true)
 
-                    <li className="mx-5 py-5 hover:text-orange-500 hover:underline">
-                        <Link to="/contractor">Contractor</Link>
-                    </li>
-                    <li className="mx-5 py-5 hover:text-orange-500 hover:underline">
-                        <Link to="/cleaning">Cleaning</Link>
-                    </li>
-                    <li className="mx-5 py-5 hover:text-orange-500 hover:underline">
-                        <Link to="/careers">Careers</Link>
-                    </li>
-                </ul>
-            </div>
+    // if window screen is 640px (sm) or bigger --> always display nav links
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 640) {
+            setShowMenu(true)
+        }
+    })
+
+    function onToggleMenu() {
+        // set icon to close or menu (open)
+        let iconElement = document.getElementById('icon')
+        if (iconElement.name === 'menu') {
+            iconElement.name = 'close'
+            setShowMenu(true)
+        } else {
+            iconElement.name = 'menu'
+            setShowMenu(false)
+        }
+    }
+
+    return (
+        <header className="fixed top-0 w-full bg-white font-semibold text-gray-600">
+            <nav className="z-50 flex min-h-[70px] items-center justify-between border shadow-xl">
+                <div className="ml-10 flex uppercase text-masis-green">
+                    <Link to="/">Masis</Link>
+                </div>
+                <div
+                    className={
+                        showMenu
+                            ? 'absolute left-0 top-[70px] z-50 flex min-h-[30vh] w-full items-center bg-white px-5 duration-500 sm:static sm:min-h-fit sm:w-auto'
+                            : 'hidden'
+                    }
+                >
+                    <ul
+                        className={
+                            showMenu
+                                ? 'flex flex-col gap-8 sm:flex-row sm:items-center sm:gap-[4vw]'
+                                : 'hidden'
+                        }
+                    >
+                        <li className="hover:text-orange-500 hover:underline">
+                            <Link to="/">About</Link>
+                        </li>
+
+                        <li className="hover:text-orange-500 hover:underline">
+                            <Link to="/contractor">Contractor</Link>
+                        </li>
+                        <li className="hover:text-orange-500 hover:underline">
+                            <Link to="/cleaning">Cleaning</Link>
+                        </li>
+                        <li className="hover:text-orange-500 hover:underline sm:mr-10">
+                            <Link to="/careers">Careers</Link>
+                        </li>
+                    </ul>
+                </div>
+                {/* hamburger menu */}
+                <div className="mr-10 flex items-center justify-end sm:hidden">
+                    <ion-icon
+                        id="icon"
+                        onClick={onToggleMenu}
+                        class="cursor-pointer text-4xl"
+                        name="close"
+                    ></ion-icon>
+                </div>
+            </nav>
         </header>
     )
 }

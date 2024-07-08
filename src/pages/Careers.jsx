@@ -15,58 +15,61 @@ function Careers() {
 
     return (
         <div className="my-0 flex flex-col">
-            <div className="min-h-[800px] bg-[url('../public/images/seattle.jpg')] bg-cover bg-fixed">
-                <h1 className="mt-80 text-center text-8xl font-semibold uppercase text-white">
+            <div className="min-h-[500px] bg-[url('../public/images/seattle.jpg')] bg-cover bg-fixed md:min-h-[650px] lg:min-h-[800px]">
+                <h1 className="xs:text-5xl flex h-screen items-center justify-center text-center text-4xl font-semibold uppercase text-white sm:text-6xl md:text-7xl lg:text-8xl">
                     Future Careers
                 </h1>
             </div>
 
-            <div className="mb-7 bg-masis-green p-8" data-aos="fade-up">
-                <h2 className="mb-5 text-center text-3xl font-semibold">
+            <div
+                className="bg-masis-green px-4 pt-4 text-center md:mb-5 md:px-8 md:pt-8"
+                data-aos="fade-up"
+            >
+                <h2 className="mb-2 font-semibold md:mb-5 lg:text-xl xl:text-2xl">
                     Why Should You Join Masis
                 </h2>
-                <div className="grid grid-cols-3 justify-items-center gap-x-10 py-7 text-center">
-                    <div>
-                        <h2 className="mb-5 text-2xl font-semibold">
+                <div className="flex flex-col md:grid md:grid-cols-3 md:justify-items-center md:gap-x-10 md:py-5">
+                    <div className="mb-5 md:mb-0">
+                        <h2 className="mb-2 font-semibold md:mb-5">
                             Competitive Pay
                         </h2>
                         <img
-                            className="mx-auto h-[200px]"
+                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
                             src="../../public/images/money.png"
                             alt="competitive pay"
                         />
-                        <p className="p-4">
+                        <p className="p-2 md:p-4">
                             We offer competitive pay rates to ensure our team
                             members are fairly compensated for their skills and
                             contributions. Your expertise deserves to be
                             rewarded.
                         </p>
                     </div>
-                    <div>
-                        <h2 className="mb-5 text-2xl font-semibold">
+                    <div className="mb-5 md:mb-0">
+                        <h2 className="mb-2 font-semibold md:mb-5">
                             Career Growth & Development
                         </h2>
                         <img
-                            className="mx-auto h-[200px]"
+                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
                             src="../../public/images/promotion.png"
                             alt="career growth and development"
                         />
-                        <p className="p-4">
+                        <p className="p-2 md:p-4">
                             We support your career growth with training
                             programs, mentorship, and the chance to work on
                             diverse and exciting projects.
                         </p>
                     </div>
-                    <div>
-                        <h2 className="mb-5 text-2xl font-semibold">
+                    <div className="mb-5 md:mb-0">
+                        <h2 className="mb-2 font-semibold md:mb-5">
                             Job Stability & Security
                         </h2>
                         <img
-                            className="m-auto h-[200px]"
+                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
                             src="../../public/images/job.png"
                             alt="job stability and security"
                         />
-                        <p className="p-4">
+                        <p className="p-2 md:p-4">
                             We provide our employees with job stability and
                             security, offering a reliable and consistent work
                             environment where you can build a long-term career.
@@ -75,7 +78,7 @@ function Careers() {
                 </div>
             </div>
 
-            <h2 className="text-center text-2xl font-semibold">
+            <h2 className="mt-5 text-center font-semibold md:mt-0">
                 Join Our Team Today!
             </h2>
             <ContactForm

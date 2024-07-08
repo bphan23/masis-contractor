@@ -16,24 +16,23 @@ function Cleaning() {
 
     return (
         <div className="flex flex-col">
-            <h1 className="my-7 text-center text-3xl font-semibold">
+            <h1 className="my-2 text-center font-semibold md:my-7 md:text-xl lg:my-7 lg:text-2xl xl:text-3xl">
                 Cleaning Services
             </h1>
 
             {/* commerical cleaning */}
             <div
-                className="mx-10 mb-10 grid grid-cols-2 gap-10"
+                className="mx-5 flex flex-col text-center lg:mx-10 lg:mb-10 lg:grid lg:grid-cols-2 lg:gap-10 lg:text-left"
                 data-aos="fade-left"
             >
                 <img
+                    className="hidden lg:inline-block"
                     src="../../public/images/c-cleaning.jpg"
                     alt="commerical cleaning"
                 />
 
                 <div>
-                    <h2 className="mb-5 text-2xl font-semibold">
-                        Commerical Cleaning
-                    </h2>
+                    <h2 className="mb-5 font-semibold">Commerical Cleaning</h2>
                     <p className="mb-5">
                         At Masis Cleaning, we offer top-notch commercial
                         cleaning services designed to create a pristine and
@@ -63,13 +62,11 @@ function Cleaning() {
 
             {/* residential cleaning */}
             <div
-                className="mx-10 mb-10 grid grid-cols-2 gap-10"
+                className="mx-5 flex flex-col text-center lg:mx-10 lg:mb-10 lg:grid lg:grid-cols-2 lg:gap-10 lg:text-left"
                 data-aos="fade-right"
             >
                 <div>
-                    <h2 className="mb-5 text-2xl font-semibold">
-                        Residential Cleaning
-                    </h2>
+                    <h2 className="mb-5 font-semibold">Residential Cleaning</h2>
                     <p className="mb-5">
                         At Masis Cleaning, we provide exceptional residential
                         cleaning services to ensure your home remains a clean,
@@ -95,27 +92,32 @@ function Cleaning() {
                     </p>
                 </div>
                 <img
+                    className="hidden lg:inline-block"
                     src="../../public/images/r-cleaning-1.jpg"
                     alt="residential cleaning"
                 />
             </div>
 
-            <div className="bg-masis-green text-center" data-aos="fade-up">
-                <h2 className="my-7 text-center text-2xl font-semibold">
+            <div
+                className="bg-masis-green px-4 pt-4 text-center md:mb-5 md:px-8 md:pt-8"
+                data-aos="fade-up"
+            >
+                <h2 className="mb-2 font-semibold md:mb-5 lg:text-xl xl:text-2xl">
                     Why Choose Us?
                 </h2>
-                <div className="m-8 grid grid-cols-5 gap-x-5">
+
+                <div className="flex flex-col md:grid md:grid-cols-5 md:justify-items-center md:gap-x-5 md:py-5">
                     {/* item 1 */}
-                    <div className="flex flex-col">
-                        <h2 className="mb-2 p-2 text-xl font-semibold">
+                    <div className="mb-5 md:mb-0">
+                        <h2 className="mb-2 font-semibold md:mb-5">
                             Experienced Professionals
                         </h2>
                         <img
-                            className="mx-auto h-[150px]"
+                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
                             src="../../public/images/expert.png"
                             alt="experienced professionals"
                         />
-                        <p className="p-4">
+                        <p className="p-2 md:p-4">
                             Our team consists of highly trained and experienced
                             cleaning professionals dedicated to delivering
                             exceptional results.
@@ -123,16 +125,16 @@ function Cleaning() {
                     </div>
 
                     {/* item 2 */}
-                    <div className="flex flex-col">
-                        <h2 className="mb-2 p-2 text-xl font-semibold">
+                    <div className="mb-5 md:mb-0">
+                        <h2 className="mb-2 font-semibold md:mb-5">
                             Eco-Friendly Products
                         </h2>
                         <img
-                            className="mx-auto h-[150px]"
+                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
                             src="../../public/images/eco-friendly.png"
                             alt="eco-friendly products"
                         />
-                        <p className="p-4">
+                        <p className="p-2 md:p-4">
                             We use environmentally friendly cleaning products
                             that are safe for your staff and clients, while
                             effectively tackling dirt and grime.
@@ -140,16 +142,16 @@ function Cleaning() {
                     </div>
 
                     {/* item 3 */}
-                    <div className="flex flex-col">
-                        <h2 className="mb-2 p-2 text-xl font-semibold">
+                    <div className="mb-5 md:mb-0">
+                        <h2 className="mb-2 font-semibold md:mb-5">
                             Flexible Scheduling
                         </h2>
                         <img
-                            className="mx-auto h-[150px]"
+                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
                             src="../../public/images/schedule.png"
                             alt="flexible scheduling"
                         />
-                        <p className="p-4">
+                        <p className="p-2 md:p-4">
                             We understand the importance of minimal disruption
                             to your operations. Our flexible scheduling options
                             include cleaning during business hours, after hours,
@@ -158,32 +160,32 @@ function Cleaning() {
                     </div>
 
                     {/* item 4 */}
-                    <div className="flex flex-col">
-                        <h2 className="mb-2 p-2 text-xl font-semibold">
+                    <div className="mb-5 md:mb-0">
+                        <h2 className="mb-2 font-semibold md:mb-5">
                             Health and Safety Compliance
                         </h2>
                         <img
-                            className="mx-auto h-[150px]"
+                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
                             src="../../public/images/safe.png"
                             alt="health and safety compliance"
                         />
-                        <p className="p-4">
+                        <p className="p-2 md:p-4">
                             We adhere to industry standards and regulations to
                             ensure a safe and healthy workplace.
                         </p>
                     </div>
 
                     {/* item 5 */}
-                    <div className="flex flex-col">
-                        <h2 className="mb-2 p-2 text-xl font-semibold">
+                    <div className="mb-5 md:mb-0">
+                        <h2 className="mb-2 font-semibold md:mb-5">
                             Customized Cleaning Plans
                         </h2>
                         <img
-                            className="mx-auto h-[150px]"
+                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
                             src="../../public/images/checklist.png"
                             alt="customized cleaning plans"
                         />
-                        <p className="p-4">
+                        <p className="p-2 md:p-4">
                             We tailor our cleaning services to meet the unique
                             needs of your business, ensuring you receive the
                             highest level of service.
@@ -192,7 +194,7 @@ function Cleaning() {
                 </div>
             </div>
 
-            <h2 className="my-7 text-center text-2xl font-semibold">
+            <h2 className="mt-5 text-center font-semibold md:mt-0">
                 Free Cleaning Consultation
             </h2>
 

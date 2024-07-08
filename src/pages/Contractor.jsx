@@ -16,11 +16,11 @@ function Contractor() {
 
     return (
         <div className="flex flex-col">
-            <h1 className="my-7 text-center text-3xl font-semibold">
+            <h1 className="my-2 text-center font-semibold md:my-7 md:text-xl lg:my-7 lg:text-2xl xl:text-3xl">
                 Contractor Services
             </h1>
 
-            <div className="mx-10 mb-10 grid grid-cols-2 grid-rows-5 gap-10">
+            <div className="mx-7 flex flex-col lg:mx-10 lg:mb-10 lg:grid lg:grid-cols-2 lg:grid-rows-5 lg:gap-10">
                 <ContractorCard
                     serviceName={'Home Additions'}
                     imagePath={'../../public/images/construction-1.jpg'}
@@ -99,67 +99,71 @@ function Contractor() {
                 />
             </div>
 
-            <div className="bg-masis-green text-center" data-aos="fade-up">
-                <h2 className="my-7 text-center text-2xl font-semibold">
+            <div
+                className="bg-masis-green px-4 pt-4 text-center md:mb-0 md:px-8 md:pt-8"
+                data-aos="fade-up"
+            >
+                <h2 className="mb-2 font-semibold md:mb-5 lg:text-xl xl:text-2xl">
                     Why Choose Us?
                 </h2>
-                <div className="m-8 grid grid-cols-4 gap-x-5">
+
+                <div className="flex flex-col md:grid md:grid-cols-4 md:justify-items-center md:gap-x-5 md:py-5">
                     {/* item 1 */}
-                    <div>
-                        <h3 className='font-semibold" mb-2 p-2 text-xl font-semibold'>
+                    <div className="mb-5 md:mb-0">
+                        <h2 className="mb-2 font-semibold md:mb-5">
                             Experience and Expertise
-                        </h3>
+                        </h2>
                         <img
-                            className="mx-auto h-[150px]"
+                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
                             src="../../public/images/stamp.png"
                             alt="experience and expertise"
                         />
-                        <p className="p-4">
+                        <p className="p-2 md:p-4">
                             With years of experience, our skilled team ensures
                             high-quality results on every project.
                         </p>
                     </div>
                     {/* item 2 */}
-                    <div>
-                        <h3 className='font-semibold" mb-2 p-2 text-xl font-semibold'>
+                    <div className="mb-5 md:mb-0">
+                        <h2 className="mb-2 font-semibold md:mb-5">
                             Customer Satisfaction
-                        </h3>
+                        </h2>
                         <img
-                            className="mx-auto h-[150px]"
+                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
                             src="../../public/images/customer-experience.png"
                             alt="customer satisfaction"
                         />
-                        <p className="p-4">
+                        <p className="p-2 md:p-4">
                             We prioritize our customers' needs and work
                             diligently to achieve their complete satisfaction.
                         </p>
                     </div>
                     {/* item 3 */}
-                    <div>
-                        <h3 className='font-semibold" mb-2 p-2 text-xl font-semibold'>
+                    <div className="mb-5 md:mb-0">
+                        <h2 className="mb-2 font-semibold md:mb-5">
                             Innovative Solutions
-                        </h3>
+                        </h2>
                         <img
-                            className="mx-auto h-[150px]"
+                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
                             src="../../public/images/creative.png"
                             alt="innovative solutions"
                         />
-                        <p className="p-4">
+                        <p className="p-2 md:p-4">
                             We bring innovative ideas and solutions to every
                             project, ensuring modern and efficient outcomes.
                         </p>
                     </div>
                     {/* item 4 */}
-                    <div>
-                        <h3 className='font-semibold" mb-2 p-2 text-xl font-semibold'>
+                    <div className="mb-5 md:mb-0">
+                        <h2 className="mb-2 font-semibold md:mb-5">
                             Reliability
-                        </h3>
+                        </h2>
                         <img
-                            className="mx-auto h-[150px]"
+                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
                             src="../../public/images/dependable.png"
                             alt="reliability"
                         />
-                        <p className="p-4">
+                        <p className="p-2 md:p-4">
                             You can count on us to deliver projects on time and
                             within budget, maintaining transparency and
                             communication throughout the process.
@@ -171,15 +175,15 @@ function Contractor() {
             </div>
 
             <div
-                className="min-h-[500px] bg-[url('../public/images/bg.png')] bg-cover bg-fixed"
+                className="min-h-[350px] bg-[url('../public/images/bg.png')] bg-cover bg-fixed md:mb-5 md:min-h-[400px]"
                 data-aos="fade-up"
             >
-                <h2 className="mt-32 p-20 text-center text-7xl font-semibold uppercase text-white">
+                <h2 className="xs:text-5xl mx-10 flex h-screen items-center justify-center text-center text-4xl font-semibold uppercase text-white sm:text-6xl md:text-7xl lg:text-8xl">
                     Let Us Bring Your Visions to Life
                 </h2>
             </div>
 
-            <h2 className="my-7 text-center text-2xl font-semibold">
+            <h2 className="mt-5 text-center font-semibold md:mt-0">
                 Free Estimate
             </h2>
 
