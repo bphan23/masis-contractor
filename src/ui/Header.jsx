@@ -43,7 +43,7 @@ function Header() {
                                 : 'hidden'
                         }
                     >
-                        <li className="hover:text-orange-500 hover:underline">
+                        <li className="mt-5 hover:text-orange-500 hover:underline sm:mt-0">
                             <Link to="/">About</Link>
                         </li>
 
@@ -53,7 +53,7 @@ function Header() {
                         <li className="hover:text-orange-500 hover:underline">
                             <Link to="/cleaning">Cleaning</Link>
                         </li>
-                        <li className="hover:text-orange-500 hover:underline sm:mr-10">
+                        <li className="mb-5 hover:text-orange-500 hover:underline sm:mb-0 sm:mr-10">
                             <Link to="/careers">Careers</Link>
                         </li>
                     </ul>
