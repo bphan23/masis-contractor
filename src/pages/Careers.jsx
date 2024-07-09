@@ -15,7 +15,7 @@ function Careers() {
 
     return (
         <div className="my-0 flex flex-col">
-            <div className="min-h-[500px] bg-[url('../../public/images/seattle.jpg')] bg-cover bg-fixed md:min-h-[650px] lg:min-h-[800px]">
+            <div className="bg-[url(('../public/images/seattle.jpg')] min-h-[500px] bg-cover bg-fixed md:min-h-[650px] lg:min-h-[800px]">
                 <h1 className="flex h-screen items-center justify-center text-center text-4xl font-semibold uppercase text-white xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
                     Future Careers
                 </h1>
