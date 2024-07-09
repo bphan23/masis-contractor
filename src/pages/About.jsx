@@ -13,7 +13,7 @@ function About() {
             <div>
                 <img
                     className="mx-auto mb-2 h-[100px] sm:h-[200px] md:h-[350px] lg:mb-7 lg:h-[500px] 2xl:h-[600px]"
-                    src="../../public/images/construction-1.jpg"
+                    src="images/construction-1.jpg"
                     alt="construction 1"
                 />
             </div>
@@ -39,7 +39,7 @@ function About() {
                 </h2>
                 <img
                     className="mx-auto mb-2 h-[100px] lg:mb-5 lg:h-[150px] xl:h-[200px]"
-                    src="../../public/images/builder.png"
+                    src="images/builder.png"
                     alt="builder"
                 />
                 <p className="mb-2 lg:mb-5">
@@ -62,7 +62,7 @@ function About() {
                 </h2>
                 <img
                     className="mx-auto mb-2 h-[100px] lg:mb-5 lg:h-[150px] xl:h-[200px]"
-                    src="../../public/images/cleaning.png"
+                    src="images/cleaning.png"
                     alt="cleaning"
                 />
                 <p className="mb-2 lg:mb-5">

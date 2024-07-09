@@ -15,7 +15,7 @@ function Careers() {
 
     return (
         <div className="my-0 flex flex-col">
-            <div className="min-h-[500px] bg-[url('../public/images/seattle.jpg')] bg-cover bg-fixed md:min-h-[650px] lg:min-h-[800px]">
+            <div className="min-h-[500px] bg-[url('images/seattle.jpg')] bg-cover bg-fixed md:min-h-[650px] lg:min-h-[800px]">
                 <h1 className="flex h-screen items-center justify-center text-center text-4xl font-semibold uppercase text-white xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
                     Future Careers
                 </h1>
@@ -35,7 +35,7 @@ function Careers() {
                         </h2>
                         <img
                             className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
-                            src="../../public/images/money.png"
+                            src="images/money.png"
                             alt="competitive pay"
                         />
                         <p className="p-2 md:p-4">
@@ -51,7 +51,7 @@ function Careers() {
                         </h2>
                         <img
                             className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
-                            src="../../public/images/promotion.png"
+                            src="images/promotion.png"
                             alt="career growth and development"
                         />
                         <p className="p-2 md:p-4">
@@ -66,7 +66,7 @@ function Careers() {
                         </h2>
                         <img
                             className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
-                            src="../../public/images/job.png"
+                            src="images/job.png"
                             alt="job stability and security"
                         />
                         <p className="p-2 md:p-4">

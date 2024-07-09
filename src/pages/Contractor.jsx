@@ -23,14 +23,14 @@ function Contractor() {
             <div className="mx-7 flex flex-col lg:mx-10 lg:mb-10 lg:grid lg:grid-cols-2 lg:grid-rows-5 lg:gap-10">
                 <ContractorCard
                     serviceName={'Home Additions'}
-                    imagePath={'../../public/images/construction-1.jpg'}
+                    imagePath={'images/construction-1.jpg'}
                     serviceDescription={
                         'Expanding your living space with expertly crafted home additions.'
                     }
                 />
                 <ContractorCard
                     serviceName={'Kitchen Remodeling'}
-                    imagePath={'../../public/images/construction-2.jpg'}
+                    imagePath={'images/construction-2.jpg'}
                     serviceDescription={
                         'Creating the kitchen of your dreams with modern designs and functionality.'
                     }
@@ -46,7 +46,7 @@ function Contractor() {
 
                 <ContractorCard
                     serviceName={'Roofing'}
-                    imagePath={'../../public/images/construction-4.jpg'}
+                    imagePath={'images/construction-4.jpg'}
                     serviceDescription={
                         'Providing durable and reliable roofing solutions to protect your home.'
                     }
@@ -54,7 +54,7 @@ function Contractor() {
 
                 <ContractorCard
                     serviceName={'Carpentry'}
-                    imagePath={'../../public/images/construction-5.jpg'}
+                    imagePath={'images/construction-5.jpg'}
                     serviceDescription={
                         'Crafting custom woodwork and structural enhancements.'
                     }
@@ -62,7 +62,7 @@ function Contractor() {
 
                 <ContractorCard
                     serviceName={'Decks'}
-                    imagePath={'../../public/images/construction-6.jpg'}
+                    imagePath={'images/construction-6.jpg'}
                     serviceDescription={
                         'Designing and building beautiful and functional outdoor decks.'
                     }
@@ -70,21 +70,21 @@ function Contractor() {
 
                 <ContractorCard
                     serviceName={'Flooring'}
-                    imagePath={'../../public/images/construction-1.jpg'}
+                    imagePath={'images/construction-1.jpg'}
                     serviceDescription={
                         'Installing a variety of flooring options to suit your style and needs.'
                     }
                 />
                 <ContractorCard
                     serviceName={'Custom Remodeling'}
-                    imagePath={'../../public/images/construction-2.jpg'}
+                    imagePath={'images/construction-2.jpg'}
                     serviceDescription={
                         'Tailoring remodeling projects to your specific requirements.'
                     }
                 />
                 <ContractorCard
                     serviceName={'Tiles'}
-                    imagePath={'../../public/images/construction-3.jpg'}
+                    imagePath={'images/construction-3.jpg'}
                     serviceDescription={
                         'Expert tile installation for floors, walls, and backsplashes.'
                     }
@@ -92,7 +92,7 @@ function Contractor() {
 
                 <ContractorCard
                     serviceName={'Wall Moving & Enlarging Doors'}
-                    imagePath={'../../public/images/construction-4.jpg'}
+                    imagePath={'images/construction-4.jpg'}
                     serviceDescription={
                         'Adjusting and enhancing your home’s layout for better flow and accessibility.'
                     }
@@ -130,7 +130,7 @@ function Contractor() {
                         </h2>
                         <img
                             className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
-                            src="../../public/images/customer-experience.png"
+                            src="images/customer-experience.png"
                             alt="customer satisfaction"
                         />
                         <p className="p-2 md:p-4">
@@ -145,7 +145,7 @@ function Contractor() {
                         </h2>
                         <img
                             className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
-                            src="../../public/images/creative.png"
+                            src="images/creative.png"
                             alt="innovative solutions"
                         />
                         <p className="p-2 md:p-4">
@@ -160,7 +160,7 @@ function Contractor() {
                         </h2>
                         <img
                             className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
-                            src="../../public/images/dependable.png"
+                            src="images/dependable.png"
                             alt="reliability"
                         />
                         <p className="p-2 md:p-4">

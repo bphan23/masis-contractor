@@ -27,7 +27,7 @@ function Cleaning() {
             >
                 <img
                     className="hidden lg:inline-block"
-                    src="../../public/images/c-cleaning.jpg"
+                    src="images/c-cleaning.jpg"
                     alt="commerical cleaning"
                 />
 
@@ -93,7 +93,7 @@ function Cleaning() {
                 </div>
                 <img
                     className="hidden lg:inline-block"
-                    src="../../public/images/r-cleaning-1.jpg"
+                    src="images/r-cleaning-1.jpg"
                     alt="residential cleaning"
                 />
             </div>
@@ -114,7 +114,7 @@ function Cleaning() {
                         </h2>
                         <img
                             className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
-                            src="../../public/images/expert.png"
+                            src="images/expert.png"
                             alt="experienced professionals"
                         />
                         <p className="p-2 md:p-4">
@@ -131,7 +131,7 @@ function Cleaning() {
                         </h2>
                         <img
                             className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
-                            src="../../public/images/eco-friendly.png"
+                            src="images/eco-friendly.png"
                             alt="eco-friendly products"
                         />
                         <p className="p-2 md:p-4">
@@ -148,7 +148,7 @@ function Cleaning() {
                         </h2>
                         <img
                             className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
-                            src="../../public/images/checklist.png"
+                            src="images/checklist.png"
                             alt="customized cleaning plans"
                         />
                         <p className="p-2 md:p-4">
@@ -165,7 +165,7 @@ function Cleaning() {
                         </h2>
                         <img
                             className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
-                            src="../../public/images/safe.png"
+                            src="images/safe.png"
                             alt="health and safety compliance"
                         />
                         <p className="p-2 md:p-4">
