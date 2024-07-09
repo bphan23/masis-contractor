@@ -1,7 +1,6 @@
 import AOS from 'aos'
 import 'aos/dist/aos.css' // You can also use <link> for styles
-import { Link } from 'react-router-dom'
-// ..
+
 AOS.init()
 
 function About() {
@@ -32,7 +31,7 @@ function About() {
             </div>
 
             <div
-                className="bg-orange-500 p-2 text-center lg:p-4"
+                className="bg-masis-green p-2 text-center lg:p-4"
                 data-aos="fade-down"
             >
                 <h2 className="mb-2 font-semibold lg:mb-5">
@@ -55,7 +54,7 @@ function About() {
             </div>
 
             <div
-                className="bg-masis-green p-2 text-center lg:p-4"
+                className="bg-stone-100 p-2 text-center lg:p-4"
                 data-aos="fade-down"
             >
                 <h2 className="mb-2 font-semibold lg:mb-5">

@@ -99,14 +99,14 @@ function Cleaning() {
             </div>
 
             <div
-                className="bg-masis-green px-4 pt-4 text-center md:mb-5 md:px-8 md:pt-8"
+                className="bg-stone-100 px-4 pt-4 text-center md:mb-5 md:px-8 md:pt-8"
                 data-aos="fade-up"
             >
                 <h2 className="mb-2 font-semibold md:mb-5 lg:text-xl xl:text-2xl">
                     Why Choose Us?
                 </h2>
 
-                <div className="flex flex-col md:grid md:grid-cols-5 md:justify-items-center md:gap-x-5 md:py-5">
+                <div className="flex flex-col md:grid md:grid-cols-4 md:justify-items-center md:gap-x-5 md:py-5">
                     {/* item 1 */}
                     <div className="mb-5 md:mb-0">
                         <h2 className="mb-2 font-semibold md:mb-5">
@@ -144,18 +144,17 @@ function Cleaning() {
                     {/* item 3 */}
                     <div className="mb-5 md:mb-0">
                         <h2 className="mb-2 font-semibold md:mb-5">
-                            Flexible Scheduling
+                            Customized Cleaning Plans
                         </h2>
                         <img
                             className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
-                            src="../../public/images/schedule.png"
-                            alt="flexible scheduling"
+                            src="../../public/images/checklist.png"
+                            alt="customized cleaning plans"
                         />
                         <p className="p-2 md:p-4">
-                            We understand the importance of minimal disruption
-                            to your operations. Our flexible scheduling options
-                            include cleaning during business hours, after hours,
-                            or on weekends.
+                            We tailor our cleaning services to meet the unique
+                            needs of your business, ensuring you receive the
+                            highest level of service.
                         </p>
                     </div>
 
@@ -172,23 +171,6 @@ function Cleaning() {
                         <p className="p-2 md:p-4">
                             We adhere to industry standards and regulations to
                             ensure a safe and healthy workplace.
-                        </p>
-                    </div>
-
-                    {/* item 5 */}
-                    <div className="mb-5 md:mb-0">
-                        <h2 className="mb-2 font-semibold md:mb-5">
-                            Customized Cleaning Plans
-                        </h2>
-                        <img
-                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
-                            src="../../public/images/checklist.png"
-                            alt="customized cleaning plans"
-                        />
-                        <p className="p-2 md:p-4">
-                            We tailor our cleaning services to meet the unique
-                            needs of your business, ensuring you receive the
-                            highest level of service.
                         </p>
                     </div>
                 </div>

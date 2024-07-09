@@ -16,13 +16,13 @@ function Careers() {
     return (
         <div className="my-0 flex flex-col">
             <div className="min-h-[500px] bg-[url('../public/images/seattle.jpg')] bg-cover bg-fixed md:min-h-[650px] lg:min-h-[800px]">
-                <h1 className="xs:text-5xl flex h-screen items-center justify-center text-center text-4xl font-semibold uppercase text-white sm:text-6xl md:text-7xl lg:text-8xl">
+                <h1 className="flex h-screen items-center justify-center text-center text-4xl font-semibold uppercase text-white xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
                     Future Careers
                 </h1>
             </div>
 
             <div
-                className="bg-masis-green px-4 pt-4 text-center md:mb-5 md:px-8 md:pt-8"
+                className="bg-ash-brown px-4 pt-4 text-center text-white md:mb-5 md:px-8 md:pt-8"
                 data-aos="fade-up"
             >
                 <h2 className="mb-2 font-semibold md:mb-5 lg:text-xl xl:text-2xl">

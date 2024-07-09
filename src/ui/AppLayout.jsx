@@ -22,7 +22,7 @@ function AppLayout() {
     return (
         <div className="grid h-screen grid-rows-[1fr_auto]">
             <Header />
-            <main className="mt-20">
+            <main className="mt-20 sm:mt-16">
                 {/* allows us to see children of app layout which is the pages */}
                 <Outlet context={selectOptions} />
             </main>

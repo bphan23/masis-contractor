@@ -2,7 +2,9 @@
 export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
-        extend: { colors: { 'masis-green': '#a6c36f' } },
+        extend: {
+            colors: { 'masis-green': '#a6c36f', 'ash-brown': '#493F2F' },
+        },
         screens: {
             xs: '490px',
             sm: '640px',

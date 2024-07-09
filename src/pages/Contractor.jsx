@@ -100,7 +100,7 @@ function Contractor() {
             </div>
 
             <div
-                className="bg-masis-green px-4 pt-4 text-center md:mb-0 md:px-8 md:pt-8"
+                className="bg-ash-brown px-4 pt-4 text-center text-white md:mb-0 md:px-8 md:pt-8"
                 data-aos="fade-up"
             >
                 <h2 className="mb-2 font-semibold md:mb-5 lg:text-xl xl:text-2xl">
@@ -178,7 +178,7 @@ function Contractor() {
                 className="min-h-[350px] bg-[url('../public/images/bg.png')] bg-cover bg-fixed md:mb-5 md:min-h-[400px]"
                 data-aos="fade-up"
             >
-                <h2 className="xs:text-5xl mx-10 flex h-screen items-center justify-center text-center text-4xl font-semibold uppercase text-white sm:text-6xl md:text-7xl lg:text-8xl">
+                <h2 className="mx-10 flex h-screen items-center justify-center text-center text-4xl font-semibold uppercase text-white xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
                     Let Us Bring Your Visions to Life
                 </h2>
             </div>
