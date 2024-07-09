@@ -29,16 +29,16 @@ function Contractor() {
                     }
                 />
                 <ContractorCard
-                    serviceName={'Kitchen Remodeling'}
+                    serviceName={'Water Damage Restoration '}
                     imagePath={'images/construction-2.jpg'}
                     serviceDescription={
-                        'Creating the kitchen of your dreams with modern designs and functionality.'
+                        'Certified by the Institute of Inspection Cleaning and Restoration Certification.'
                     }
                 />
 
                 <ContractorCard
                     serviceName={'Bathroom Remodeling'}
-                    imagePath={'../../public/images/construction-3.jpg'}
+                    imagePath={'images/construction-3.jpg'}
                     serviceDescription={
                         'Transforming bathrooms into luxurious and comfortable spaces.'
                     }
@@ -115,7 +115,7 @@ function Contractor() {
                         </h2>
                         <img
                             className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
-                            src="../../public/images/stamp.png"
+                            src="images/stamp.png"
                             alt="experience and expertise"
                         />
                         <p className="p-2 md:p-4">

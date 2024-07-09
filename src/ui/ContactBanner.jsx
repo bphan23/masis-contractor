@@ -8,7 +8,7 @@ function ContactBanner() {
         >
             <img
                 className="sm:h-30 mx-auto mb-2 h-20 lg:mx-0 lg:mb-0 lg:h-40"
-                src="../../public/images/masis-logo.jpg"
+                src="images/masis-logo.jpg"
                 alt="masis general contractor logo"
             />
 
