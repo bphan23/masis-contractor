@@ -57,7 +57,7 @@ function ContactForm({
 
     return (
         <form
-            className="mx-10 my-7 rounded-md border border-gray-200 bg-white px-5"
+            className="mx-10 my-7 rounded-md border border-gray-200 bg-white px-5 text-sm"
             ref={form}
             onSubmit={handleSubmit}
             data-aos="fade-up"
@@ -146,7 +146,7 @@ function ContactForm({
                 <button className="mr-4 rounded-md border border-gray-300 bg-stone-100 px-6 py-1 transition-colors duration-300 hover:bg-stone-200 focus:outline-none focus:ring focus:ring-stone-100 focus:ring-offset-2 disabled:cursor-not-allowed">
                     Clear
                 </button>
-                <button className="focus: focus- rounded-md border border-gray-300 bg-orange-500 px-6 py-1 transition-colors duration-300 hover:bg-orange-600 focus:outline-none focus:ring focus:ring-orange-500 focus:ring-offset-2 disabled:cursor-not-allowed">
+                <button className="rounded-md border border-gray-300 bg-orange-500 px-6 py-1 transition-colors duration-300 hover:bg-orange-600 focus:outline-none focus:ring focus:ring-orange-500 focus:ring-offset-2 disabled:cursor-not-allowed">
                     Submit
                 </button>
             </div>

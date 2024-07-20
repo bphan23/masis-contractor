@@ -3,11 +3,16 @@ import { Link } from 'react-router-dom'
 
 function Header() {
     const [showMenu, setShowMenu] = useState(true)
+    const [hamburgerMenu, setHamburgerMenu] = useState('menu')
 
     // if window screen is 640px (sm) or bigger --> always display nav links
     window.addEventListener('resize', function () {
         if (window.innerWidth >= 640) {
             setShowMenu(true)
+            setHamburgerMenu('menu')
+        } else {
+            setShowMenu(false)
+            setHamburgerMenu('menu')
         }
     })
 
@@ -25,8 +30,8 @@ function Header() {
 
     return (
         <header className="fixed top-0 w-full bg-white font-semibold text-gray-600">
-            <nav className="z-50 flex min-h-[70px] items-center justify-between border shadow-xl">
-                <div className="ml-10 flex uppercase text-masis-green">
+            <nav className="z-50 flex min-h-[70px] items-center justify-between border uppercase shadow-xl">
+                <div className="text-md ml-10 flex text-masis-green">
                     <Link to="/">Masis</Link>
                 </div>
                 <div
@@ -39,8 +44,8 @@ function Header() {
                     <ul
                         className={
                             showMenu
-                                ? 'flex flex-col gap-8 sm:flex-row sm:items-center sm:gap-[4vw]'
-                                : 'hidden'
+                                ? 'flex flex-col gap-8 text-sm sm:flex-row sm:items-center sm:gap-[4vw]'
+                                : 'hidden text-sm'
                         }
                     >
                         <li className="mt-5 hover:text-orange-500 hover:underline sm:mt-0">
@@ -64,7 +69,7 @@ function Header() {
                         id="icon"
                         onClick={onToggleMenu}
                         class="cursor-pointer text-4xl"
-                        name="close"
+                        name={hamburgerMenu}
                     ></ion-icon>
                 </div>
             </nav>

@@ -16,105 +16,107 @@ function Contractor() {
 
     return (
         <div className="flex flex-col">
-            <h1 className="my-2 text-center font-semibold md:my-7 md:text-xl lg:my-7 lg:text-2xl xl:text-3xl">
-                Contractor Services
+            <h1 className="mt-5 p-10 text-center font-semibold uppercase md:text-xl lg:text-2xl xl:text-3xl">
+                Contracting Services
             </h1>
 
-            <div className="mx-7 flex flex-col lg:mx-10 lg:mb-10 lg:grid lg:grid-cols-2 lg:grid-rows-5 lg:gap-10">
-                <ContractorCard
-                    serviceName={'Home Additions'}
-                    imagePath={'images/construction-1.jpg'}
-                    serviceDescription={
-                        'Expanding your living space with expertly crafted home additions.'
-                    }
-                />
-                <ContractorCard
-                    serviceName={'Water Damage Restoration '}
-                    imagePath={'images/construction-2.jpg'}
-                    serviceDescription={
-                        'Certified by the Institute of Inspection Cleaning and Restoration Certification.'
-                    }
-                />
+            <div className="mx-20 md:mx-32 2xl:mx-96">
+                <div className="xxl:grid-cols-4 xxl:grid-rows-3 flex flex-col lg:mx-10 lg:mb-10 lg:grid lg:grid-cols-3 lg:grid-rows-4 lg:gap-10">
+                    <ContractorCard
+                        serviceName={'Home Additions'}
+                        imagePath={'images/construction-1.jpg'}
+                        serviceDescription={
+                            'Expanding your living space with expertly crafted home additions.'
+                        }
+                    />
+                    <ContractorCard
+                        serviceName={'Water Damage Restoration '}
+                        imagePath={'images/construction-2.jpg'}
+                        serviceDescription={
+                            'Certified by the Institute of Inspection Cleaning and Restoration Certification.'
+                        }
+                    />
 
-                <ContractorCard
-                    serviceName={'Bathroom Remodeling'}
-                    imagePath={'images/construction-3.jpg'}
-                    serviceDescription={
-                        'Transforming bathrooms into luxurious and comfortable spaces.'
-                    }
-                />
+                    <ContractorCard
+                        serviceName={'Bathroom Remodeling'}
+                        imagePath={'images/construction-3.jpg'}
+                        serviceDescription={
+                            'Transforming bathrooms into luxurious and comfortable spaces.'
+                        }
+                    />
 
-                <ContractorCard
-                    serviceName={'Roofing'}
-                    imagePath={'images/construction-4.jpg'}
-                    serviceDescription={
-                        'Providing durable and reliable roofing solutions to protect your home.'
-                    }
-                />
+                    <ContractorCard
+                        serviceName={'Roofing'}
+                        imagePath={'images/roofing.jpg'}
+                        serviceDescription={
+                            'Providing durable and reliable roofing solutions to protect your home.'
+                        }
+                    />
 
-                <ContractorCard
-                    serviceName={'Carpentry'}
-                    imagePath={'images/construction-5.jpg'}
-                    serviceDescription={
-                        'Crafting custom woodwork and structural enhancements.'
-                    }
-                />
+                    <ContractorCard
+                        serviceName={'Carpentry'}
+                        imagePath={'images/construction-5.jpg'}
+                        serviceDescription={
+                            'Crafting custom woodwork and structural enhancements.'
+                        }
+                    />
 
-                <ContractorCard
-                    serviceName={'Decks'}
-                    imagePath={'images/construction-6.jpg'}
-                    serviceDescription={
-                        'Designing and building beautiful and functional outdoor decks.'
-                    }
-                />
+                    <ContractorCard
+                        serviceName={'Decks'}
+                        imagePath={'images/construction-6.jpg'}
+                        serviceDescription={
+                            'Designing and building beautiful and functional outdoor decks.'
+                        }
+                    />
 
-                <ContractorCard
-                    serviceName={'Flooring'}
-                    imagePath={'images/construction-1.jpg'}
-                    serviceDescription={
-                        'Installing a variety of flooring options to suit your style and needs.'
-                    }
-                />
-                <ContractorCard
-                    serviceName={'Custom Remodeling'}
-                    imagePath={'images/construction-2.jpg'}
-                    serviceDescription={
-                        'Tailoring remodeling projects to your specific requirements.'
-                    }
-                />
-                <ContractorCard
-                    serviceName={'Tiles'}
-                    imagePath={'images/construction-3.jpg'}
-                    serviceDescription={
-                        'Expert tile installation for floors, walls, and backsplashes.'
-                    }
-                />
+                    <ContractorCard
+                        serviceName={'Flooring'}
+                        imagePath={'images/construction-1.jpg'}
+                        serviceDescription={
+                            'Installing a variety of flooring options to suit your style and needs.'
+                        }
+                    />
+                    <ContractorCard
+                        serviceName={'Custom Remodeling'}
+                        imagePath={'images/construction-2.jpg'}
+                        serviceDescription={
+                            'Tailoring remodeling projects to your specific requirements.'
+                        }
+                    />
+                    <ContractorCard
+                        serviceName={'Tiles'}
+                        imagePath={'images/construction-3.jpg'}
+                        serviceDescription={
+                            'Expert tile installation for floors, walls, and backsplashes.'
+                        }
+                    />
 
-                <ContractorCard
-                    serviceName={'Wall Moving & Enlarging Doors'}
-                    imagePath={'images/construction-4.jpg'}
-                    serviceDescription={
-                        'Adjusting and enhancing your home’s layout for better flow and accessibility.'
-                    }
-                />
+                    <ContractorCard
+                        serviceName={'Wall Moving & Enlarging Doors'}
+                        imagePath={'images/construction-4.jpg'}
+                        serviceDescription={
+                            'Adjusting and enhancing your home’s layout for better flow and accessibility.'
+                        }
+                    />
+                </div>
             </div>
 
             <div
-                className="bg-ash-brown px-4 pt-4 text-center text-white md:mb-0 md:px-8 md:pt-8"
+                className="bg-ash-brown p-4 text-center text-sm text-white md:p-10 md:text-base xl:text-lg"
                 data-aos="fade-up"
             >
-                <h2 className="mb-2 font-semibold md:mb-5 lg:text-xl xl:text-2xl">
+                <h2 className="xxl:text-4xl mb-2 font-semibold md:mb-5 lg:text-xl xl:text-2xl">
                     Why Choose Us?
                 </h2>
 
-                <div className="flex flex-col md:grid md:grid-cols-4 md:justify-items-center md:gap-x-5 md:py-5">
+                <div className="flex flex-col md:grid md:grid-cols-4 md:justify-items-center md:gap-x-10 md:py-5">
                     {/* item 1 */}
                     <div className="mb-5 md:mb-0">
                         <h2 className="mb-2 font-semibold md:mb-5">
                             Experience and Expertise
                         </h2>
                         <img
-                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
+                            className="xxl:h-[200px] mx-auto h-[100px] sm:h-[125px] md:h-[150px]"
                             src="images/stamp.png"
                             alt="experience and expertise"
                         />
@@ -129,7 +131,7 @@ function Contractor() {
                             Customer Satisfaction
                         </h2>
                         <img
-                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
+                            className="xxl:h-[200px] mx-auto h-[100px] sm:h-[125px] md:h-[150px]"
                             src="images/customer-experience.png"
                             alt="customer satisfaction"
                         />
@@ -144,7 +146,7 @@ function Contractor() {
                             Innovative Solutions
                         </h2>
                         <img
-                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
+                            className="xxl:h-[200px] mx-auto h-[100px] sm:h-[125px] md:h-[150px]"
                             src="images/creative.png"
                             alt="innovative solutions"
                         />
@@ -159,7 +161,7 @@ function Contractor() {
                             Reliability
                         </h2>
                         <img
-                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
+                            className="xxl:h-[200px] mx-auto h-[100px] sm:h-[125px] md:h-[150px]"
                             src="images/dependable.png"
                             alt="reliability"
                         />

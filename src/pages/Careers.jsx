@@ -22,11 +22,11 @@ function Careers() {
             </div>
 
             <div
-                className="bg-ash-brown px-4 pt-4 text-center text-white md:mb-5 md:px-8 md:pt-8"
+                className="bg-ash-brown p-4 text-center text-sm text-white md:mb-5 md:p-10 md:text-base xl:text-lg"
                 data-aos="fade-up"
             >
-                <h2 className="mb-2 font-semibold md:mb-5 lg:text-xl xl:text-2xl">
-                    Why Should You Join Masis
+                <h2 className="xxl:text-4xl mb-2 font-semibold md:mb-5 lg:text-xl xl:text-2xl">
+                    Why Should You Join Masis?
                 </h2>
                 <div className="flex flex-col md:grid md:grid-cols-3 md:justify-items-center md:gap-x-10 md:py-5">
                     <div className="mb-5 md:mb-0">
@@ -34,7 +34,7 @@ function Careers() {
                             Competitive Pay
                         </h2>
                         <img
-                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
+                            className="xxl:h-[250px] mx-auto h-[100px] sm:h-[125px] md:h-[150px]"
                             src="images/money.png"
                             alt="competitive pay"
                         />
@@ -50,7 +50,7 @@ function Careers() {
                             Career Growth & Development
                         </h2>
                         <img
-                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
+                            className="xxl:h-[250px] mx-auto h-[100px] sm:h-[125px] md:h-[150px]"
                             src="images/promotion.png"
                             alt="career growth and development"
                         />
@@ -65,7 +65,7 @@ function Careers() {
                             Job Stability & Security
                         </h2>
                         <img
-                            className="mx-auto h-[100px] sm:h-[150px] md:h-[200px]"
+                            className="xxl:h-[250px] mx-auto h-[100px] sm:h-[125px] md:h-[150px]"
                             src="images/job.png"
                             alt="job stability and security"
                         />
