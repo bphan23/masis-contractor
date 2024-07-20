@@ -9,7 +9,7 @@ function Header() {
     window.addEventListener('resize', function () {
         if (window.innerWidth >= 640) {
             setShowMenu(true)
-            setHamburgerMenu('menu')
+            setHamburgerMenu('close')
         } else {
             setShowMenu(false)
             setHamburgerMenu('menu')
