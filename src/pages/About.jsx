@@ -13,7 +13,10 @@ function About() {
                     About Us
                 </h1>
 
-                <div className="xl:text-md mx-10 mb-5 text-sm lg:mx-40 lg:p-4 lg:text-base">
+                <div
+                    className="xl:text-md mx-10 mb-5 text-sm lg:mx-40 lg:p-4 lg:text-base"
+                    data-aos="fade-up"
+                >
                     <p className="mb-2 text-left lg:mb-5">
                         Welcome to Masis Contractor LLC, your trusted partner
                         for all your construction and cleaning needs. We take
@@ -48,7 +51,7 @@ function About() {
                 </div>
             </div>
 
-            <div className="bg-orange-500 p-10">
+            <div className="bg-orange-500 p-10" data-aos="fade-up">
                 <h2 className="mb-5 text-4xl font-bold uppercase md:text-5xl">
                     Licensed, Bonded & Insured
                 </h2>
@@ -65,7 +68,7 @@ function About() {
                 </p>
             </div>
 
-            <div className="bg-stone-100 p-10">
+            <div className="bg-stone-100 p-10" data-aos="fade-up">
                 <h2 className="mb-5 font-bold uppercase md:text-xl lg:text-2xl xl:text-3xl">
                     Testimonials
                 </h2>
