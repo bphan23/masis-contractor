@@ -26,7 +26,7 @@ function Header() {
                     <div className="flex flex-col items-start gap-1 sm:items-center">
                         <Link to="/" onClick={closeMenu}>
                             <img
-                                src="../public/images/masis-little-logo.png"
+                                src="/images/masis-little-logo.png"
                                 alt="masis logo"
                                 className="mb-1 w-36"
                             />

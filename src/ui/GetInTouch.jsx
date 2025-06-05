@@ -7,7 +7,7 @@ function GetInTouch() {
                 {/* Logo Section */}
                 <div className="flex min-w-0 items-center justify-center bg-white p-8 md:w-1/3 md:p-0">
                     <img
-                        src="../public/images/masis-logo.png"
+                        src="/images/masis-logo.png"
                         alt="masis logo"
                         className="h-20 w-auto md:h-32"
                     />
