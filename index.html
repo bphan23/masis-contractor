@@ -2,25 +2,59 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link
-            rel="icon"
-            type="image/svg+xml"
-            href="./public/images/masis-logo.jpg"
+
+        <!-- Primary Meta Tags -->
+        <title>Masis General Contractor</title>
+        <meta
+            name="description"
+            content="Masis Contractors – Expert home additions, remodeling, roofing, and general contracting services."
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Favicon -->
+        <!-- Note: In a React/Vite setup, public assets can be referenced from root -->
+        <link rel="icon" type="image/jpeg" href="/images/masis-logo.jpg" />
+
+        <!-- Google Fonts: Inter -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- AOS (Animate On Scroll) CSS -->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Masis</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
     </head>
     <body
-        class="bg-white font-sans text-xs sm:text-sm md:text-base lg:text-xl 2xl:text-2xl"
+        class="2xl:text-2xl bg-white font-sans text-xs sm:text-sm md:text-base lg:text-xl"
     >
+        <!-- Mounting point for React -->
         <div id="root"></div>
+
+        <!-- Main React entry -->
         <script type="module" src="/src/main.jsx"></script>
+
+        <!-- AOS (Animate On Scroll) JS & Initialization -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-            AOS.init()
+            document.addEventListener('DOMContentLoaded', function () {
+                AOS.init({
+                    once: true, // animations only happen once as you scroll
+                    duration: 600, // global animation duration (ms)
+                    easing: 'ease-out-quart', // easing function
+                })
+            })
         </script>
+
+        <!-- Ionicons (for hamburger/menu icons) -->
         <script
             type="module"
             src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

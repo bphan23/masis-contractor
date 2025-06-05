@@ -2,85 +2,197 @@ import { Link } from 'react-router-dom'
 
 function ContactBanner() {
     return (
-        <div className="bg-white p-12 lg:p-20">
-            <div className="flex flex-col bg-white text-sm xl:flex-row xl:justify-between">
-                <div className="flex justify-center">
-                    <img
-                        className="xl:h-50 h-40"
-                        src="images/masis-logo.jpg"
-                        alt="masis general contractor logo"
-                    />
+        <div
+            className="bg-masis-blue w-full bg-cover bg-center p-12 bg-blend-overlay lg:p-32"
+            style={{
+                backgroundImage:
+                    "url('../public/images/footer-v2-pattern.png')",
+            }}
+        >
+            {/* Use a responsive grid: 1 column on very small screens, 2 columns on small screens, 4 columns on large */}
+            <div className="grid grid-cols-1 gap-8 text-[16px] text-gray-300 sm:grid-cols-2 lg:grid-cols-4">
+                {/* Our Services */}
+                <div className="text-left">
+                    <h3 className="mb-2 text-[24px] font-semibold text-white">
+                        Our Services
+                    </h3>
+                    <span className="border-masis-orange mb-8 block w-32 border-t-2 border-dotted"></span>
+                    <ul className="space-y-2">
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            Roofing
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            Flooring
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            Painting
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            Plumbing
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            Decks and Patios
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            Home Additions
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            And More...
+                        </li>
+                    </ul>
                 </div>
-                <div className="flex flex-col bg-white text-center lg:flex-row lg:gap-x-10 lg:p-5 lg:text-left">
-                    <div className="mb-5 mt-5 lg:mb-0 lg:mt-0">
-                        <h3 className="mb-2 text-sm font-semibold uppercase">
-                            Contact Us
-                        </h3>
-                        <a className="text-gray-600" href="tel:2065108575">
-                            206-510-8575
-                        </a>
-                        <a
-                            className="block text-gray-600"
-                            href="mailto:masiscleaning@outlook.com<"
-                        >
-                            masiscleaning@outlook.com
-                        </a>
-                        <a
-                            className="block text-gray-600"
-                            href="mailto:masiscontractor@outlook.com"
-                        >
-                            masiscontractor@outlook.com
-                        </a>
-                    </div>
 
-                    <div className="mb-5 lg:mb-0">
-                        <h3 className="mb-2 font-semibold uppercase">
-                            Business Hours
-                        </h3>
-                        <ul className="text-gray-600">
-                            <li>Monday 8:00 AM - 8:00 PM</li>
-                            <li>Tuesday 8:00 AM - 8:00 PM</li>
-                            <li>Wednesday 8:00 AM - 8:00 PM</li>
-                            <li>Thursday 8:00 AM - 8:00 PM</li>
-                            <li>Friday 8:00 AM - 8:00 PM</li>
-                            <li>Saturday 8:00 AM - 8:00 PM</li>
-                            <li>Sunday Closed</li>
-                        </ul>
-                    </div>
+                {/* Business Hours */}
+                <div className="text-left">
+                    <h3 className="mb-2 text-[24px] font-semibold text-white">
+                        Business Hours
+                    </h3>
+                    <span className="border-masis-orange mb-8 block w-32 border-t-2 border-dotted"></span>
+                    <ul className="space-y-2">
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            Monday 8:00 AM – 8:00 PM
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            Tuesday 8:00 AM – 8:00 PM
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            Wednesday 8:00 AM – 8:00 PM
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            Thursday 8:00 AM – 8:00 PM
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            Friday 8:00 AM – 8:00 PM
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            Saturday 8:00 AM – 8:00 PM
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            Sunday Closed
+                        </li>
+                    </ul>
+                </div>
 
-                    <div className="mb-5 lg:mb-0">
-                        <h3 className="mb-2 font-semibold uppercase">
-                            Quick Links
-                        </h3>
-                        <ul className="text-gray-600">
-                            <li className="hover:text-orange-500 hover:underline">
-                                <Link to="/">About</Link>
-                            </li>
-                            <li className="hover:text-orange-500 hover:underline">
-                                <Link to="/contractor">Contractor</Link>
-                            </li>
-                            <li className="hover:text-orange-500 hover:underline">
-                                <Link to="/cleaning">Cleaning</Link>
-                            </li>
-                            <li className="hover:text-orange-500 hover:underline">
-                                <Link to="/careers">Careers</Link>
-                            </li>
-                        </ul>
-                    </div>
+                {/* Useful Links */}
+                <div className="text-left">
+                    <h3 className="mb-2 text-[24px] font-semibold text-white">
+                        Useful Links
+                    </h3>
+                    <span className="border-masis-orange mb-8 block w-32 border-t-2 border-dotted"></span>
+                    <ul className="space-y-2">
+                        <li className="hover:text-masis-orange flex items-center gap-2 transition-colors">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li className="hover:text-masis-orange flex items-center gap-2 transition-colors">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            <Link to="/services">Services</Link>
+                        </li>
+                        <li className="hover:text-masis-orange flex items-center gap-2 transition-colors">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            <Link to="/gallery">Gallery</Link>
+                        </li>
+                        <li className="hover:text-masis-orange flex items-center gap-2 transition-colors">
+                            <i
+                                className="fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                            <Link to="/contact-us">Contact Us</Link>
+                        </li>
+                    </ul>
+                </div>
 
-                    <div className="mb-5 lg:mb-0">
-                        <h3 className="mb-2 font-semibold uppercase">
-                            Services
-                        </h3>
-                        <ul className="text-gray-600">
-                            <li>Home Additions</li>
-                            <li>Remodeling</li>
-                            <li>Roofing & Decks</li>
-                            <li>Wall Moving & Enlarging Doors</li>
-                            <li>Flooring & Tiles</li>
-                            <li>Much More...</li>
-                        </ul>
-                    </div>
+                {/* Contact Us */}
+                <div className="text-left">
+                    <h3 className="mb-2 text-[24px] font-semibold text-white">
+                        Contact Us
+                    </h3>
+                    <span className="border-masis-orange mb-8 block w-32 border-t-2 border-dotted"></span>
+                    <a
+                        href="tel:2065108575"
+                        className="hover:text-masis-orange flex items-center gap-2 transition-colors"
+                    >
+                        <i
+                            className="fa fa-phone text-masis-orange"
+                            aria-hidden="true"
+                        ></i>
+                        206-510-8575
+                    </a>
+                    <a
+                        href="mailto:masiscontractor@outlook.com"
+                        className="hover:text-masis-orange mt-2 flex items-center gap-2 transition-colors"
+                    >
+                        <i
+                            className="fa fa-envelope text-masis-orange"
+                            aria-hidden="true"
+                        ></i>
+                        masiscontractor@outlook.com
+                    </a>
                 </div>
             </div>
         </div>

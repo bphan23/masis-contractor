@@ -1,79 +1,158 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 function Header() {
-    const [showMenu, setShowMenu] = useState(true)
-    const [hamburgerMenu, setHamburgerMenu] = useState('menu')
+    const [showMenu, setShowMenu] = useState(window.innerWidth >= 680)
+    const location = useLocation()
 
-    // if window screen is 640px (sm) or bigger --> always display nav links
-    window.addEventListener('resize', function () {
-        if (window.innerWidth >= 640) {
-            setShowMenu(true)
-            setHamburgerMenu('close')
-        } else {
-            setShowMenu(false)
-            setHamburgerMenu('menu')
+    useEffect(() => {
+        const handleResize = () => {
+            setShowMenu(window.innerWidth >= 680)
         }
-    })
+        window.addEventListener('resize', handleResize)
+        handleResize()
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
 
-    function onToggleMenu() {
-        // set icon to close or menu (open)
-        let iconElement = document.getElementById('icon')
-        if (iconElement.name === 'menu') {
-            iconElement.name = 'close'
-            setShowMenu(true)
-        } else {
-            iconElement.name = 'menu'
-            setShowMenu(false)
-        }
-    }
+    const onToggleMenu = () => setShowMenu((prev) => !prev)
+    const closeMenu = () => window.innerWidth < 680 && setShowMenu(false)
+    const isActive = (path) => location.pathname === path
 
     return (
-        <header className="fixed top-0 w-full bg-white font-semibold text-gray-600">
-            <nav className="z-50 flex min-h-[70px] items-center justify-between border uppercase shadow-xl">
-                <div className="text-md ml-10 flex text-masis-green">
-                    <Link to="/">Masis</Link>
-                </div>
-                <div
-                    className={
-                        showMenu
-                            ? 'absolute left-0 top-[70px] z-50 flex min-h-[30vh] w-full items-center bg-white px-5 duration-500 sm:static sm:min-h-fit sm:w-auto'
-                            : 'hidden'
-                    }
-                >
-                    <ul
-                        className={
-                            showMenu
-                                ? 'flex flex-col gap-8 text-sm sm:flex-row sm:items-center sm:gap-[4vw]'
-                                : 'hidden text-sm'
-                        }
-                    >
-                        <li className="mt-5 hover:text-orange-500 hover:underline sm:mt-0">
-                            <Link to="/">About</Link>
-                        </li>
+        <>
+            <header className="fixed top-0 z-50 w-full bg-white text-gray-600 shadow-xl">
+                <nav className="mx-auto flex max-w-screen-xl items-center justify-between px-4 py-3 sm:px-8">
+                    {/* Logo & Subtitle */}
+                    <div className="flex flex-col items-start gap-1 sm:items-center">
+                        <Link to="/" onClick={closeMenu}>
+                            <img
+                                src="../public/images/masis-little-logo.png"
+                                alt="masis logo"
+                                className="mb-1 w-36"
+                            />
+                        </Link>
+                        <div className="bg-masis-orange rounded px-3 py-1 font-thin text-white">
+                            <h2 className="text-sm uppercase">
+                                General Contractor
+                            </h2>
+                        </div>
+                    </div>
 
-                        <li className="hover:text-orange-500 hover:underline">
-                            <Link to="/contractor">Contractor</Link>
-                        </li>
-                        <li className="hover:text-orange-500 hover:underline">
-                            <Link to="/cleaning">Cleaning</Link>
-                        </li>
-                        <li className="mb-5 hover:text-orange-500 hover:underline sm:mb-0 sm:mr-10">
-                            <Link to="/careers">Careers</Link>
-                        </li>
-                    </ul>
-                </div>
-                {/* hamburger menu */}
-                <div className="mr-10 flex items-center justify-end sm:hidden">
-                    <ion-icon
-                        id="icon"
+                    {/* Desktop Navigation */}
+                    <div className="hidden items-center gap-10 font-semibold text-gray-600 sm:flex">
+                        <Link
+                            to="/"
+                            className={`text-sm uppercase ${
+                                isActive('/')
+                                    ? 'text-masis-orange'
+                                    : 'hover:text-masis-orange'
+                            }`}
+                            onClick={closeMenu}
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            to="/services"
+                            className={`text-sm uppercase ${
+                                isActive('/services')
+                                    ? 'text-masis-orange'
+                                    : 'hover:text-masis-orange'
+                            }`}
+                            onClick={closeMenu}
+                        >
+                            Services
+                        </Link>
+                        <Link
+                            to="/gallery"
+                            className={`text-sm uppercase ${
+                                isActive('/gallery')
+                                    ? 'text-masis-orange'
+                                    : 'hover:text-masis-orange'
+                            }`}
+                            onClick={closeMenu}
+                        >
+                            Gallery
+                        </Link>
+                        <Link
+                            to="/contact-us"
+                            className={`text-sm uppercase ${
+                                isActive('/contact-us')
+                                    ? 'text-masis-orange'
+                                    : 'hover:text-masis-orange'
+                            }`}
+                            onClick={closeMenu}
+                        >
+                            Contact Us
+                        </Link>
+                    </div>
+
+                    {/* Hamburger Icon (Mobile Only) */}
+                    <div className="pr-2 sm:hidden">
+                        <ion-icon
+                            onClick={onToggleMenu}
+                            class="cursor-pointer text-4xl"
+                            name={showMenu ? 'close' : 'menu'}
+                        ></ion-icon>
+                    </div>
+                </nav>
+            </header>
+
+            {/* Mobile Menu */}
+            {showMenu && window.innerWidth < 640 && (
+                <>
+                    <div
                         onClick={onToggleMenu}
-                        class="cursor-pointer text-4xl"
-                        name={hamburgerMenu}
-                    ></ion-icon>
-                </div>
-            </nav>
-        </header>
+                        className="fixed inset-0 z-40 bg-black bg-opacity-30 backdrop-blur-sm"
+                    />
+                    <div
+                        className="fixed right-0 top-0 z-50 flex h-full w-64 flex-col gap-8 bg-white px-6 py-8 text-left font-semibold text-gray-600"
+                        style={{
+                            transform: showMenu
+                                ? 'translateX(0)'
+                                : 'translateX(100%)',
+                            transition: 'transform 0.3s ease-in-out',
+                        }}
+                    >
+                        <Link
+                            to="/"
+                            onClick={onToggleMenu}
+                            className={isActive('/') ? 'text-masis-orange' : ''}
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            to="/services"
+                            onClick={onToggleMenu}
+                            className={
+                                isActive('/services') ? 'text-masis-orange' : ''
+                            }
+                        >
+                            Services
+                        </Link>
+                        <Link
+                            to="/gallery"
+                            onClick={onToggleMenu}
+                            className={
+                                isActive('/gallery') ? 'text-masis-orange' : ''
+                            }
+                        >
+                            Gallery
+                        </Link>
+                        <Link
+                            to="/contact-us"
+                            onClick={onToggleMenu}
+                            className={
+                                isActive('/contact-us')
+                                    ? 'text-masis-orange'
+                                    : ''
+                            }
+                        >
+                            Contact Us
+                        </Link>
+                    </div>
+                </>
+            )}
+        </>
     )
 }
 

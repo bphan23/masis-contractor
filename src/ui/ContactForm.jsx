@@ -57,96 +57,105 @@ function ContactForm({
 
     return (
         <form
-            className="mx-10 my-7 rounded-md border border-gray-200 bg-white px-5 text-sm"
             ref={form}
             onSubmit={handleSubmit}
             data-aos="fade-up"
+            className="mx-auto mb-10 max-w-2xl rounded-lg border border-gray-200 bg-gray-50 p-6 text-sm shadow-sm"
         >
-            <div className="my-4">
-                <label htmlFor="selected" className="mr-2 font-semibold">
+            {/* Service Selection */}
+            <div className="mb-6">
+                <label htmlFor="selected" className="mb-1 block font-semibold">
                     {selectDescription}
                 </label>
                 <select
-                    className="rounded-md border border-gray-300 transition-all duration-300 focus:outline-none focus:ring focus:ring-masis-green"
                     name="selected_value"
-                    onChange={(event) => {
-                        setSelectedValue(event.target.value)
-                    }}
+                    className="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-masis-green"
+                    onChange={(e) => setSelectedValue(e.target.value)}
                 >
                     {Object.entries(selectOptions).map(([key, value]) => (
-                        <option className="bg-masis-green" value={value}>
+                        <option key={value} value={value}>
                             {key}
                         </option>
                     ))}
                 </select>
             </div>
-            {/* Name */}
-            <div className="my-4">
-                <label htmlFor="full-name" className="font-semibold">
+
+            {/* Full Name */}
+            <div className="mb-6">
+                <label htmlFor="full-name" className="mb-1 block font-semibold">
                     Full Name
                 </label>
                 <input
                     type="text"
                     name="full_name"
-                    className="input"
+                    className="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-masis-green"
                     placeholder="Enter Full Name"
-                    onChange={(event) => {
-                        setFullName(event.target.value)
-                    }}
+                    onChange={(e) => setFullName(e.target.value)}
                 />
             </div>
+
             {/* Email */}
-            <div className="my-4">
-                <label htmlFor="email" className="font-semibold">
+            <div className="mb-6">
+                <label htmlFor="email" className="mb-1 block font-semibold">
                     Email
                 </label>
                 <input
-                    type="text"
+                    type="email"
                     name="email"
-                    className="input"
+                    className="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-masis-green"
                     placeholder="Enter Email"
-                    onChange={(event) => {
-                        setEmail(event.target.value)
-                    }}
+                    onChange={(e) => setEmail(e.target.value)}
                 />
             </div>
+
             {/* Phone Number */}
-            <div className="my-4">
-                <label htmlFor="phone" className="font-semibold">
+            <div className="mb-6">
+                <label htmlFor="phone" className="mb-1 block font-semibold">
                     Phone Number
                 </label>
                 <input
                     type="tel"
                     name="phone"
-                    className="input"
+                    className="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-masis-green"
                     placeholder="Enter Phone Number"
-                    onChange={(event) => {
-                        setPhone(event.target.value)
-                    }}
+                    onChange={(e) => setPhone(e.target.value)}
                 />
             </div>
-            {/* About */}
-            <div className="my-4">
-                <label htmlFor="about" className="font-semibold">
-                    About
+
+            {/* Job Description */}
+            <div className="mb-6">
+                <label htmlFor="about" className="mb-1 block font-semibold">
+                    Job Description
                 </label>
-
                 <textarea
-                    className="mt-2 min-h-[100px] w-full rounded-md border border-gray-300 p-2 transition-all duration-300 focus:outline-none focus:ring focus:ring-masis-green"
-                    type="text"
-                    placeholder={aboutPlaceHolder}
                     name="about"
-                    onChange={(event) => {
-                        setAbout(event.target.value)
-                    }}
+                    placeholder={aboutPlaceHolder}
+                    className="min-h-[100px] w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-masis-green"
+                    onChange={(e) => setAbout(e.target.value)}
                 />
             </div>
 
-            <div className="mb-5 flex flex-row justify-end">
-                <button className="mr-4 rounded-md border border-gray-300 bg-stone-100 px-6 py-1 transition-colors duration-300 hover:bg-stone-200 focus:outline-none focus:ring focus:ring-stone-100 focus:ring-offset-2 disabled:cursor-not-allowed">
+            {/* Buttons */}
+            <div className="flex justify-end space-x-4">
+                <button
+                    type="button"
+                    onClick={() => {
+                        // Optional: Reset logic
+                        setSelectedValue('')
+                        setFullName('')
+                        setEmail('')
+                        setPhone('')
+                        setAbout('')
+                    }}
+                    className="border-masis-orange text-masis-orange rounded border px-6 py-2 transition hover:bg-black hover:text-white"
+                >
                     Clear
                 </button>
-                <button className="rounded-md border border-gray-300 bg-orange-500 px-6 py-1 transition-colors duration-300 hover:bg-orange-600 focus:outline-none focus:ring focus:ring-orange-500 focus:ring-offset-2 disabled:cursor-not-allowed">
+
+                <button
+                    type="submit"
+                    className="bg-masis-orange rounded px-6 py-2 text-white transition hover:bg-black"
+                >
                     Submit
                 </button>
             </div>

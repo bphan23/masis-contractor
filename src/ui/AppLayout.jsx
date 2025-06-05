@@ -6,16 +6,12 @@ import ContactBanner from './ContactBanner'
 function AppLayout() {
     let selectOptions = {
         'Please Select': 'none',
-        'Home Additions': 'home-additions',
-        'Kitchen Remodeling': 'kitchen-remodel',
-        'Bathroom Remodeling': 'bathroom-remodel',
         Roofing: 'roofing',
-        Capentry: 'carpentry',
-        Decks: 'decks',
         Flooring: 'flooring',
-        'Custom Remodeling': 'custom-remodel',
-        Tiles: 'tiles',
-        'Wall Moving & Enlarging Doors': 'wall-moving-and-enlarging-doors',
+        Painting: 'painting',
+        Plumbing: 'plumbing',
+        'Decks and Patios': 'decks-and-patios',
+        'Home Additions': 'home-additions',
         'Other Job': 'other-job',
     }
 

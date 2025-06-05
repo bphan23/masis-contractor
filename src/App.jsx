@@ -1,9 +1,9 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import About from './pages/About'
-import Cleaning from './pages/Cleaning'
-import Careers from './pages/Careers'
+import Home from './pages/Home'
 import AppLayout from './ui/AppLayout'
-import Contractor from './pages/Contractor'
+import Services from './pages/Services'
+import Gallery from './pages/Gallery'
+import ContactUs from './pages/ContactUs'
 
 const router = createBrowserRouter([
     {
@@ -11,20 +11,19 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <About />,
+                element: <Home />,
             },
             {
-                path: '/contractor',
-                element: <Contractor />,
+                path: '/services',
+                element: <Services />,
             },
             {
-                path: '/cleaning',
-                element: <Cleaning />,
+                path: '/gallery',
+                element: <Gallery />,
             },
-
             {
-                path: '/careers',
-                element: <Careers />,
+                path: '/contact-us',
+                element: <ContactUs />,
             },
         ],
     },
