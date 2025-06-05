@@ -5,7 +5,6 @@ import ContactBanner from './ContactBanner'
 
 function AppLayout() {
     let selectOptions = {
-        'Please Select': 'none',
         Roofing: 'roofing',
         Flooring: 'flooring',
         Painting: 'painting',
