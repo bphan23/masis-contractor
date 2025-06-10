@@ -3,6 +3,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import GetInTouch from '../ui/GetInTouch'
 import { Link } from 'react-router-dom'
+import { Brush, Drill, Hammer, HousePlus, Pickaxe, Wrench } from 'lucide-react'
 
 const slides = [
     {
@@ -154,7 +155,7 @@ function Home() {
 
                     <Link
                         to="/services"
-                        className="bg-masis-orange mt-4 inline-block rounded px-10 py-4 text-sm uppercase text-white shadow-lg transition hover:bg-black"
+                        className="mt-4 inline-block rounded bg-masis-orange px-10 py-4 text-sm uppercase text-white shadow-lg transition hover:bg-black"
                     >
                         Our Services{' '}
                         <span className="ml-2 inline-block">↗</span>
@@ -180,7 +181,7 @@ function Home() {
 
                     {/* Text Section */}
                     <div className="w-full max-w-xl text-center md:text-left">
-                        <span className="text-masis-orange text-[18px] uppercase tracking-widest">
+                        <span className="text-[18px] uppercase tracking-widest text-masis-orange">
                             About Us
                         </span>
                         <h2
@@ -217,7 +218,7 @@ function Home() {
                 aria-labelledby="services-title"
             >
                 <div className="mb-12 text-center">
-                    <span className="text-masis-orange text-[18px] uppercase tracking-widest">
+                    <span className="text-[18px] uppercase tracking-widest text-masis-orange">
                         Services
                     </span>
                     <h2
@@ -235,7 +236,7 @@ function Home() {
 
                     <Link
                         to="/services"
-                        className="bg-masis-orange inline-block rounded px-10 py-4 text-sm uppercase text-white shadow transition hover:bg-black"
+                        className="inline-block rounded bg-masis-orange px-10 py-4 text-sm uppercase text-white shadow transition hover:bg-black"
                     >
                         See More
                         <span className="ml-2">↗</span>
@@ -244,23 +245,23 @@ function Home() {
 
                 <div className="align-items flex flex-wrap justify-center gap-12">
                     {[
-                        'Roofing',
-                        'Flooring',
-                        'Painting',
-                        'Plumbing',
-                        'Decks and Patios',
-                        'Home Additions',
-                    ].map((service, idx) => (
+                        ['Roofing', <Drill size={48} />],
+                        ['Flooring', <Pickaxe size={48} />],
+                        ['Painting', <Brush size={48} />],
+                        ['Plumbing', <Wrench size={48} />],
+                        ['Decks and Patios', <Hammer size={48} />],
+                        ['Home Additions', <HousePlus size={48} />],
+                    ].map(([service, icon], idx) => (
                         <article
                             key={idx}
                             className="w-full rounded-xl border border-gray-200 bg-white text-center shadow-md transition hover:shadow-lg sm:w-[48%] lg:w-[10%]"
                             aria-label={service}
                         >
                             <span
-                                className="text-masis-orange my-5 block text-3xl"
+                                className="my-5 block flex justify-center text-masis-orange"
                                 aria-hidden="true"
                             >
-                                🛠️
+                                {icon}
                             </span>
                             <h3 className="mb-10 px-2 text-lg font-semibold text-gray-900">
                                 {service}
@@ -276,7 +277,7 @@ function Home() {
                 aria-labelledby="testimonial-title"
             >
                 <div className="mb-12 text-center">
-                    <span className="text-masis-orange block text-[18px] uppercase tracking-widest">
+                    <span className="block text-[18px] uppercase tracking-widest text-masis-orange">
                         Testimonial
                     </span>
                     <h2
@@ -345,7 +346,7 @@ function Home() {
                 <p>
                     Washington State Contractor License:{' '}
                     <a
-                        className="text-masis-orange text-[16px] underline"
+                        className="text-[16px] text-masis-orange underline"
                         href="https://secure.lni.wa.gov/verify/Detail.aspx?UBI=&LIC=MASISCL875JR&SAW="
                         target="_blank"
                         rel="noreferrer"
